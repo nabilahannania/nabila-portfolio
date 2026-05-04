@@ -1,81 +1,50 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="glossy">
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-        />
+    <q-header class="bg-white">
+      <!-- <q-separator
+          color="teal-8"
+          size="1"
+        /> -->
+      <q-toolbar class="q-px-xl">
+        <a href="/" class="text-white no-decoration l-grow">
+          <q-toolbar-title class="text-bold text-teal-8 text-subtitle1">
+            Nabila Hannania
+          </q-toolbar-title>
+        </a>
+        
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <div class="justify-between">
+          <q-btn
+          class="q-py q-mx-md"
+            flat
+            dense
+            no-caps
+            label="Home"
+            :to="{ name: 'home' }"
+            :color="route.name === 'home' ? 'teal-8' : 'teal-3'"
+          />
 
-        <div>Quasar v{{ $q.version }}</div>
+          <q-btn
+          class="q-py"
+            flat
+            dense
+            no-caps
+            label="Projects"
+            color="teal-4"
+          />
+
+        </div>
+        
       </q-toolbar>
+      <q-separator
+          color="teal-8"
+          size="3"
+        />
     </q-header>
 
-    <!-- <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      class="bg-grey-2"
-    >
-      <q-list>
-        <q-item-label header>Essential Links</q-item-label>
-        <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="school" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/">
-          <q-item-section avatar>
-            <q-icon name="code" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Github</q-item-label>
-            <q-item-label caption>github.com/quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="chat" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Discord Chat Channel</q-item-label>
-            <q-item-label caption>chat.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="forum" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Forum</q-item-label>
-            <q-item-label caption>forum.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://twitter.com/quasarframework">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer> -->
-
+    
     <q-page-container>
+      
       <router-view></router-view>
     </q-page-container>
   </q-layout>
@@ -95,7 +64,70 @@ export default {
     return {
       leftDrawerOpen: ref(false),
       router,
+      route
     }
   }
 }
 </script>
+
+
+<style lang="scss">
+.l-container {
+  max-width: 1440px !important;
+}
+
+.l-grow {
+  flex-grow: 99 !important;
+}
+
+.l-text-header {
+  font-size: 64px !important;
+  line-height: 1;
+  @media only screen and (max-width: 900px) {
+    font-size: 36px !important;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 24px !important;
+  }
+}
+
+.l-text-title {
+  font-size: 32px !important;
+  line-height: 1.8;
+  @media only screen and (max-width: 900px) {
+    font-size: 26px !important;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 20px !important;
+  }
+}
+
+.l-text-subtitle {
+  font-size: 20px !important;
+  line-height: 1.8;
+  @media only screen and (max-width: 500px) {
+    font-size: 16px !important;
+  }
+}
+
+.l-text-detail {
+  font-size: 18px !important;
+  line-height: 1.8;
+  @media only screen and (max-width: 500px) {
+    font-size: 13px !important;
+  }
+}
+
+.l-text-description {
+  font-size: 14px !important;
+  line-height: 1.8;
+  @media only screen and (max-width: 500px) {
+    font-size: 11px !important;
+  }
+}
+
+.border-card {
+  border-radius: 10px !important;
+  border: 1px solid #d0d0d0 !important;
+}
+</style>
