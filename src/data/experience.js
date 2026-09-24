@@ -1,0 +1,45 @@
+export const experiences = [
+  {
+    id: "autentika",
+    role: "Data Scientist | AI Engineer",
+    company: "PT Autentika Digital Indonesia",
+    url: "https://autentika.id/",
+    period: "Feb 2025 – Present",
+    location: "Jakarta, Indonesia",
+    achievements: [
+      "Built OCR automation pipelines for Indonesian documents with CNN-based (docTR, Tesseract) and multimodal LLM models, reaching a Character Error Rate of 0.014.",
+      "Developed biometric verification models: liveness detection with XGBoost and LBP features (98% accuracy) and CNN-based face recognition (97% accuracy).",
+      "Cut inference latency by reducing model size, and shipped AI services as Docker containers for scalable, reliable production deployment.",
+      "Set up ClearML experiment tracking and a dataset versioning pipeline to speed up training and reduce experimentation overhead; prototyped RAG agents and object tracking for production feasibility.",
+    ],
+    tags: ["PyTorch", "docTR", "Tesseract", "XGBoost", "Docker", "ClearML"],
+  },
+  {
+    id: "jaist",
+    role: "Research Intern",
+    company: "Japan Advanced Institute of Science and Technology (JAIST)",
+    url: "https://www.jaist.ac.jp/english/",
+    period: "Jan 2024 – Mar 2024",
+    location: "Ishikawa, Japan",
+    achievements: [
+      "Fine-tuned self-supervised speech models (XLS-R, HuBERT) for low-resource speech recognition, achieving a 34% relative improvement in Word Error Rate on small-corpus tasks.",
+      "Developed a Transformer-based language model to overcome low-resource constraints and raise transcription accuracy.",
+      "Designed experiments to evaluate model generalization and optimize inference latency, collaborating with international research teams under the Sakura Science Program.",
+    ],
+    tags: ["XLS-R", "HuBERT", "Transformers", "ASR"],
+  },
+  {
+    id: "glair",
+    role: "AI Engineer",
+    company: "GLAIR",
+    url: "https://glair.ai/",
+    period: "Mar 2023 – Aug 2023",
+    location: "Jakarta, Indonesia",
+    achievements: [
+      "Fine-tuned large language models (GPT-2, IndoT5, mT5, IdT5) for text generation, summarization, and question answering.",
+      "Explored LangChain toolkits to integrate LLMs and extend natural language understanding capabilities.",
+      "Documented processes, methodologies, code, and test results to enable smoother handovers and team knowledge sharing.",
+    ],
+    tags: ["LLM", "GPT-2", "IndoT5", "mT5", "LangChain"],
+  },
+];
